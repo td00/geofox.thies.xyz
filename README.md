@@ -1,39 +1,34 @@
-# hvvclient
-A live departure board for HVV transport (busses, S-Bahn, subway etc.) in Hamburg, Germany, implemented via REST calls to the GeoFox API GTI
+# simple gti.geofox.de dashboard page
 
-## Getting Started
+`index.html` is just a few iframes containing the actual php pages rendering the connections
 
-### Prerequisites
+the php files (`busse.php`, `einwaerts_s3.php`, `einwaerts_s31.php` & `auswaerts.php`) show the actual connections.
 
-You'll need a webserver with PHP support, plus php-xml and php-curl-module, for Ubuntu:
-```
-sudo apt-get install php-xml php-curl
-```
-Since the project uses the Geofox Thin Interface (GTI), which requires registration, you'll have to apply for API access, see [HVV page](https://www.hvv.de/de/fahrplaene/abruf-fahrplaninfos/datenabruf).
+A little bit of bootstrap css and a `dark.css` file allow for a dark background to look prettier on a status board.
 
-Please note that the Geofox API documentation etc. is in German, as well as the software output, because the entire story takes place in Hamburg.
+The frames reload every 10 seconds.
 
-### Installing
+# Requirements
 
-Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the ```index.php```. 
-Now you should see the live departures of all public transport running from the ```$stations``` array defined in ```hvvc_vars.php```, which you can - and should - change later on, of course.
+- git.geofox.de credentials
+- php-xml
+- php-curl
+- webserver (nginx/apache2/caddy)
 
-## Testing
+# Documentation
+## Status
+- ![](https://raw.githubusercontent.com/td00/geofox.thies.xyz/main/assets/images/green.png) => Live tracking available & everythings in order
+- ![](https://raw.githubusercontent.com/td00/geofox.thies.xyz/main/assets/images/red.png) => cancelled
+- ![](https://raw.githubusercontent.com/td00/geofox.thies.xyz/main/assets/images/grey.png) => no live information available
+- ![](https://raw.githubusercontent.com/td00/geofox.thies.xyz/main/assets/images/yellow.png) => delayed
+- ![](https://raw.githubusercontent.com/td00/geofox.thies.xyz/main/assets/images/black.png) => delayed (in a traffic jam)
+## Setup
+Clone the git repo to your web folder, copy `inc\credentials.php.example` to `inc\credentials.php` and replace the user & password with the provided credentials.
 
-The ```devdata``` directory contains sample XML files that demonstrate the communication of the REST interface.
-The "request"-data is produced by the hvvclient, whereas the "response" data is delivered by the Geofox server.
-The ```DLResponse.xml``` provided contains realtime data for transport that are on time, delayed, or in traffic jam, as well as cancelled journeys and plan data where no realtime data is available.
+If you don't have the required credentials, you'll need to go to https://www.hvv.de/fahrplaene/abruf-fahrplaninfos/datenabruf/ to request API credentials.
 
-The project is developed using the [NetBeans IDE](https://netbeans.apache.org/) and contains the NetBeans project data in its ```nbproject``` folder.
+# Credits & License
 
-## Authors
+Based on [axaneco/hvvclient](https://github.com/axaneco/hvvclient)
 
-* **axaneco** - *Initial work*
-
-## Acknowledgements
-
-Thanks to Simon for proofreading this README.
-
-## License
-
-This project is licensed under the GNU GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details.
+Licensed under [GNU General Public License v3.0](LICENSE)
