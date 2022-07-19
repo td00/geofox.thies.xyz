@@ -1,3 +1,10 @@
+<html>
+<head>
+<title>thies geofox client</title>
+<link href="/assets/css/dark.css" rel="stylesheet">
+<meta http-equiv="refresh" content="10">
+</head>
+<body>
 <?php
 
 /*
@@ -14,7 +21,7 @@
 include ('inc/hvvc_vars.php'); // vars + station query xml
 include ('inc/hvvc_functions.php'); //functions
 // parameter "from" given in URL?
-if ($_GET["from"]) {
+/*if ($_GET["from"]) {
     $both_dirs = TRUE;
     $stations["dep"][0] = $_GET["from"];
 }
@@ -23,6 +30,11 @@ if ($_GET["to"]) {
     $both_dirs = FALSE;
     $stations["via"][0] = $_GET["to"];
 }
+ */
+$start = "Harburg Rathaus";
+$dest = "Neugraben";
+$stations["dep"][0] = $start;
+$stations["via"][0] = $dest;
 
 // parameter "dd" given in URL?
 if ($_GET["dd"]) {
@@ -72,16 +84,16 @@ echo "<span style='font-family:sans-serif;'>";
 echo "<span style='font-size:16px;'>\n";
 
 // write results
-echo "<a href='https://geofox.hvv.de/jsf/home.seam' target='_blank'>";
+/*echo "<a href='https://geofox.hvv.de/jsf/home.seam' target='_blank'>";
 echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>";
 echo "</a>\n";
-
+ */
 // print departure list
-if ($both_dirs) { // both directions
+/*if ($both_dirs) { // both directions
     echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " (ungefiltert):<br><br>\n";
 } else {
     echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " Richtung " . $stat["via"][0] . ":<br><br>\n";
-}
+}*/
 print_departures($resultxml, $maxlist, TRUE, $ddelay); // boole parameter: table display yes/no
 
 echo "</span></span>\n";

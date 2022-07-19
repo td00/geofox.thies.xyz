@@ -22,8 +22,8 @@ $gfurl = 'https://gti.geofox.de/gti/public/';
 // first station: departures
 // second station: via filter for direction control
 // XXX filled by get_station_keys() with HVV station codes
-$stations = array(  "dep" => array( "Hamburg Hbf", "XXX"), 
-                    "via" => array( "", "XXX") 
+$stations = array(  "dep" => array( "Harburg Rathaus"), 
+		    "via" => array( "Wilhelmsburg" )
 );
 
 // date
@@ -35,8 +35,7 @@ $maxlist = 30; // max list items for query results
 $maxtimeoffset = 720; // results for max 12 hours in future
 
 // replace this by your data or...
-$username = 'username';
-$password = 'password';
+
 
 // ...include the data from an extra file
 include 'credentials.php';
