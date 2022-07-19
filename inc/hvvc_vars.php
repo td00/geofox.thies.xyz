@@ -34,8 +34,6 @@ $reftime = date("H:i");
 $maxlist = 30; // max list items for query results
 $maxtimeoffset = 720; // results for max 12 hours in future
 
-// replace this by your data or...
-
 
 // ...include the data from an extra file
 include 'credentials.php';
