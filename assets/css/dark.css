@@ -5,3 +5,7 @@ body {
 pre {
   color: white;
 }
+div {
+  background-color: lightgrey;
+  color: rgba(0, 0, 0, 0.7);
+}
