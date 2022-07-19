@@ -1,6 +1,5 @@
 <html>
 <head>
-<title>thies geofox client</title>
 <link href="/assets/css/dark.css" rel="stylesheet">
 <meta http-equiv="refresh" content="10">
 </head>
