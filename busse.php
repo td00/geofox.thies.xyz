@@ -1,5 +1,6 @@
 <html>
 <head>
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/dark.css" rel="stylesheet">
 <meta http-equiv="refresh" content="10">
 </head>

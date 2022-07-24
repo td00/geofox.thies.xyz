@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>navigate me around</title>
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/dark.css" rel="stylesheet">
+<meta charset="UTF-8">
+</head>
+<body>
+  <center>
+
+  <pre>
+  <table>
+    <tr>
+      <th><img src="/assets/images/black.png"></th>
+      <th>traffic jam </th>
+      <th><img src="/assets/images/green.png"></th>
+      <th>live info available </th>
+      
+    </tr>
+    <tr>
+      <th><img src="/assets/images/red.png"></th>
+      <th>cancelled </th>
+      <th><img src="/assets/images/yellow.png"></th>
+      <th>delay (other) </th>
+    </tr>
+    <tr>
+      <th><img src="/assets/images/grey.png"></th>
+      <th>no live info</th>
+      <th><img src="/assets/images/empty.png"></th>
+      <th></th>
+    </tr>
+  </table>
+  </pre>
+    <table>
+        <thead>
+          <tr>
+            <th><h3>Richtung Sternschanze</h3>
+              <div class="stationid"><i><img src="/assets/images/s.svg" height="20" /> Dammtor</i></th></div>
+            <th><h3>Richtung Hauptbahnhof</h3>
+              <div class="stationid"><i><img src="/assets/images/s.svg" height="20" /> Dammtor</i></th></div>
+            <th><h3>Busse in alle Richtungen</h3>
+              <div class="stationid"><i><img src="/assets/images/bus.svg" height="20" /> Uni/Staatsbibliothek</i></th></div>
+              <th><h3>Richtung Jungfernstieg</h3>
+                <div class="stationid"><i><img src="/assets/images/u.svg" height="20" /> Hamburg Harburg</i></th></div>
+              <th><h3>Richtung <br />  Hallerstraße</h3>
+                <div class="stationid"><i><img src="/assets/images/u.svg" height="20" /> Hamburg Harburg</i></th></div>
+                  
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><iframe src="/e_einwaerts.php" height="850" width="100%"></iframe></td>
+            <td><iframe src="/e_auswaerts.php" height="850" width="100%"></iframe></td>
+            <td><iframe src="/e_busse.php" height="850" width="200%"></iframe></td>
+            <td><iframe src="/e_stephansplatz_jf.php" height="850" width="100%"></iframe></td>
+            <td><iframe src="/e_stephansplatz_haller.php" height="850" width="100%"> </iframe></td>
+          </tr>
+        </tbody>
+      </table>
+      <br /> 
+      <pre>
+<!--
+Service based on data from <a href="https://gti.geofox.de">gti.geofox.de</a> & code from <a href="https://github.com/axaneco/hvvclient">hvvclient</a>.
+GitHub: <a href="https://github.com/td00/geofox.thies.xyz">td00/geofox.thies.xyz</a> | Legal: <a href="https://legal.tservic.es/?page=geofox.thies.xyz">Imprint / Privacy Policy</a>
+-->      </pre>
+    </center>
+  </body>
+</html>

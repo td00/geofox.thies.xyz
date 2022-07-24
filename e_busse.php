@@ -1,6 +1,6 @@
 <html>
 <head>
-<link href="/assets/css/bootstrap.min.css" rel="stylesheet">    
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/dark.css" rel="stylesheet">
 <meta http-equiv="refresh" content="10">
 </head>
@@ -31,8 +31,7 @@ if ($_GET["to"]) {
     $stations["via"][0] = $_GET["to"];
 }
  */
-$start = "Harburg Rathaus";
-$dest = "Neugraben";
+$start = "Universität/Staatsbibliothek";
 $stations["dep"][0] = $start;
 $stations["via"][0] = $dest;
 
