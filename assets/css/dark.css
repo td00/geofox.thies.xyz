@@ -5,7 +5,7 @@ body {
 pre {
   color: white;
 }
-div {
+.stationid {
   background-color: lightgrey;
   color: rgba(0, 0, 0, 0.7);
 }
