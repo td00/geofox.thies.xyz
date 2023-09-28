@@ -32,7 +32,7 @@ if ($_GET["to"]) {
 }
  */
 $start = "Hammer Kirche";
-$dest = "Hamburg Hbf";
+$dest = "Hauptbahnhof Nord";
 $stations["dep"][0] = $start;
 $stations["via"][0] = $dest;
 
