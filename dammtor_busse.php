@@ -11,11 +11,11 @@
  * hvvclient
  * implements checkName and departureList calls to the the GEOFOX Thin Interface (GTI)
  * a Passenger Information System for the Hamburger Verkehrsverbund (HVV)
- * for details see sections 2.2 and 2.4 of GTI Handbuch V35.1 
+ * for details see sections 2.2 and 2.4 of GTI Handbuch V35.1
  * https://gti.geofox.de/html/GTIHandbuch_p.html
- * 
+ *
  * @author axaneco
- * 
+ *
  */
 
 include ('inc/hvvc_vars.php'); // vars + station query xml
@@ -31,7 +31,7 @@ if ($_GET["to"]) {
     $stations["via"][0] = $_GET["to"];
 }
  */
-$start = "Universität/Staatsbibliothek";
+$start = "Dammtor";
 $stations["dep"][0] = $start;
 $stations["via"][0] = $dest;
 
